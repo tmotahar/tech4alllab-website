@@ -19,8 +19,46 @@ document.querySelector('#research-grid').innerHTML = content.researchAreas.map(i
 document.querySelector('#project-list').innerHTML = content.projects.map(item => `
   <article class="project-item reveal"><div class="project-number ${item.accent}">${item.number}</div><div class="project-body"><span>${item.tag}</span><h3>${item.title}</h3><p>${item.text}</p></div><div class="project-arrow" aria-hidden="true">↗</div></article>`).join('');
 
-document.querySelector('#people-grid').innerHTML = content.people.map(person => `
-  <article class="person-card ${person.featured ? 'featured' : ''} reveal"><div class="avatar" aria-hidden="true">${person.initials}</div><div><span>${person.role}</span><h3>${person.name}</h3><p>${person.bio}</p></div></article>`).join('');
+const peopleGrid = document.querySelector('#people-grid');
+
+const personCard = (person) => `
+  <article class="person-card reveal">
+    <img class="avatar-photo" src="${person.image}" alt="${person.name}">
+    <div class="person-info">
+      <span>${person.role}</span>
+      <h3>${person.name}</h3>
+      <p>${person.bio}</p>
+      ${person.website ? `<a class="person-website" href="${person.website}" target="_blank" rel="noopener noreferrer">Website ↗</a>` : ''}
+    </div>
+  </article>
+`;
+
+const director = content.people.filter(person => person.category === "director");
+const phdStudents = content.people.filter(person => person.category === "phd");
+const mastersStudents = content.people.filter(person => person.category === "masters");
+
+peopleGrid.innerHTML = `
+  <div class="people-section director-section">
+    <h3 class="people-group-title">Lab Director</h3>
+    <div class="people-row director-row">
+      ${director.map(personCard).join('')}
+    </div>
+  </div>
+
+  <div class="people-section">
+    <h3 class="people-group-title">PhD Students</h3>
+    <div class="people-row student-row">
+      ${phdStudents.map(personCard).join('')}
+    </div>
+  </div>
+
+  <div class="people-section">
+    <h3 class="people-group-title">Master's Students</h3>
+    <div class="people-row student-row">
+      ${mastersStudents.map(personCard).join('')}
+    </div>
+  </div>
+`;
 
 document.querySelector('#publication-list').innerHTML = content.publications.map(pub => `
   <article class="publication reveal"><div><span class="pub-year">${pub.year}</span><span class="pub-venue">${pub.venue}</span></div><h3>${pub.title}</h3><p>${pub.note}</p></article>`).join('');
