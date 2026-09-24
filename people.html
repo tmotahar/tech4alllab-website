@@ -1,1 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tech4All Lab advances disability-centered research in accessibility, human-computer interaction, assistive technology, AI, and rehabilitation." />
+  <meta name="theme-color" content="#092f3b" />
+  <title>Tech4All Lab | Technology for All</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Tech4All Lab home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      <span><strong>Tech4All</strong><small>LAB</small></span>
+    </a>
+    <button class="menu-button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#people">People</a><a href="#publications">Publications</a><a href="#join">Join us</a>
+    </nav>
+  </header>
 
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Technology for All · UL Lafayette</p>
+          <h1>We design technology <em>with</em> people, not just for them.</h1>
+          <p class="hero-intro">Tech4All is a disability-centered research lab advancing accessible, useful, and dignified technologies for everyday life.</p>
+          <div class="hero-actions"><a class="button primary" href="#research">Explore our research</a><a class="button secondary" href="#join">Work with us</a></div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Four connected research areas">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="center-disc"><span>TECH</span><strong>4</strong><span>ALL</span></div>
+          <div class="topic topic-a">Accessibility</div><div class="topic topic-b">Participation</div><div class="topic topic-c">Well-being</div><div class="topic topic-d">Independence</div>
+        </div>
+      </div>
+      <div class="hero-band"><span>Human–Computer Interaction</span><span>Assistive Technology</span><span>Artificial Intelligence</span><span>Rehabilitation</span></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-label reveal"><span>01</span> About the lab</div>
+      <div class="about-grid">
+        <h2 class="reveal">Research shaped by lived experience.</h2>
+        <div class="about-copy reveal"><p>We study how technology can expand independence, participation, health, and well-being for people with disabilities. Our work brings together computing, design, rehabilitation, and community knowledge.</p><p>We partner with disabled people, caregivers, clinicians, educators, and community organizations throughout the research process—from identifying meaningful problems to evaluating technologies in the places where life happens.</p></div>
+      </div>
+      <div class="principles" id="principles"></div>
+    </section>
+
+    <section class="section research" id="research">
+      <div class="section-label reveal"><span>02</span> Research areas</div>
+      <div class="section-heading reveal"><h2>Where technology meets everyday life.</h2><p>Our research crosses disciplinary boundaries while staying grounded in access, agency, and real-world impact.</p></div>
+      <div class="research-grid" id="research-grid"></div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-label reveal"><span>03</span> Selected projects</div>
+      <div class="section-heading reveal"><h2>What we are working on.</h2><p>From mobility and self-tracking to social participation and accessible AI.</p></div>
+      <div class="project-list" id="project-list"></div>
+    </section>
+
+    <section class="section people" id="people">
+      <div class="section-label reveal"><span>04</span> Our people</div>
+      <div class="people-intro reveal"><h2>A collaborative, interdisciplinary team.</h2><p>We welcome students and collaborators who care about building a more accessible world.</p></div>
+      <div class="people-grid" id="people-grid"></div>
+    </section>
+
+    <section class="section publications" id="publications">
+      <div class="section-label reveal"><span>05</span> Selected publications</div>
+      <div class="publication-layout"><div class="publication-title reveal"><h2>Ideas that move the field forward.</h2><a class="text-link" href="https://scholar.google.com/scholar?q=Tamanna+Motahar" target="_blank" rel="noreferrer">View Google Scholar <span aria-hidden="true">↗</span></a></div><div class="publication-list" id="publication-list"></div></div>
+    </section>
+
+    <section class="section join" id="join">
+      <div class="join-inner reveal">
+        <p class="eyebrow">Opportunities</p><h2>Bring your perspective to Tech4All.</h2><p>We are interested in working with motivated students, community partners, rehabilitation professionals, and researchers who share our commitment to disability-centered innovation.</p>
+        <div class="join-actions"><a class="button light" href="https://computing.louisiana.edu/" target="_blank" rel="noreferrer">Explore UL Lafayette Computing</a><a class="button outline-light" href="#contact">Contact the lab</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-main"><div><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span><strong>Tech4All</strong><small>LAB</small></span></a><p>Technology for All Lab<br />School of Computing and Informatics<br />University of Louisiana at Lafayette</p></div><div><h2>Let’s connect.</h2><p>Interested in our research, collaboration, or joining the lab?</p><a class="footer-link" href="https://computing.louisiana.edu/" target="_blank" rel="noreferrer">Visit the School of Computing and Informatics <span aria-hidden="true">↗</span></a></div></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Tech4All Lab</span><span>Designed with access in mind.</span></div>
+  </footer>
+</body>
+</html>
